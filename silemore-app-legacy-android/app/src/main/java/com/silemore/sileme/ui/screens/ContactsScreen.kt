@@ -43,6 +43,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.style.TextOverflow
@@ -50,6 +51,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.silemore.sileme.ui.LocalViewModelFactory
 import com.silemore.sileme.ui.components.InkCard
+import com.silemore.sileme.ui.theme.CoralWarm
+import com.silemore.sileme.ui.theme.MintFresh
+import com.silemore.sileme.ui.theme.MistGray
 import com.silemore.sileme.viewmodel.ContactsViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -112,8 +116,8 @@ fun ContactsScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAdd,
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = MaterialTheme.colorScheme.onPrimary
+                containerColor = CoralWarm,
+                contentColor = Color.White
             ) {
                 Icon(Icons.Outlined.PersonAdd, contentDescription = "添加")
             }
@@ -249,14 +253,14 @@ fun ContactsScreen(
 @Composable
 private fun StatusPill(text: String, isVerified: Boolean) {
     val background = if (isVerified) {
-        MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)
+        MintFresh.copy(alpha = 0.15f)
     } else {
-        MaterialTheme.colorScheme.surfaceVariant
+        MistGray.copy(alpha = 0.15f)
     }
     val foreground = if (isVerified) {
-        MaterialTheme.colorScheme.primary
+        MintFresh
     } else {
-        MaterialTheme.colorScheme.onSurfaceVariant
+        MistGray
     }
     Surface(
         shape = MaterialTheme.shapes.small,

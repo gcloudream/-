@@ -17,3 +17,21 @@ val DarkInk = Color(0xFFE9EDF0)
 val DarkInkSoft = Color(0xFFB7BDC4)
 val DarkAccent = Color(0xFF7FB2C0)
 val DarkAccentDeep = Color(0xFF6B9CA8)
+
+// 温馨配色 - 待签到状态（珊瑚橙色系）
+val CoralWarm = Color(0xFFFF9A6C)
+val CoralLight = Color(0xFFFFB88C)
+val CoralGlow = Color(0x40FF9A6C)
+
+// 温馨配色 - 已签到状态（薄荷绿色系）
+val MintFresh = Color(0xFF7ED6A5)
+val MintLight = Color(0xFFA8E6CF)
+val MintGlow = Color(0x407ED6A5)
+
+// 暂停状态（柔灰色系）
+val MistGray = Color(0xFFB8C4CE)
+val MistGrayLight = Color(0xFFD1D9E0)
+
+// 温馨背景色
+val WarmBackground = Color(0xFFFFF8F5)
+val WarmBackgroundDark = Color(0xFF1A1614)
